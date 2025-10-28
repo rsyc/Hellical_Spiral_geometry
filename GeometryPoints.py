@@ -258,8 +258,8 @@ lower_pts = np.column_stack([x_lower_data, y_lower_data, z_data])
 center_pts = np.column_stack([x_data, y_data, z_data])
 
 # scale/convert units if you want (the points are in meters currently)
-stl_file = points_to_stl(upper_pts, lower_pts, thickness=0.000, filename='helical_ribbon2D_1000pt.stl', close_ends=True)
-svg_file = write_plan_svg(center_pts, upper_pts, lower_pts, filename='helical_ribbon_plan2D_1000pt.svg')
+stl_file = points_to_stl(upper_pts, lower_pts, thickness=0.000, filename='helical_ribbon2D_10000pt.stl', close_ends=True)
+svg_file = write_plan_svg(center_pts, upper_pts, lower_pts, filename='helical_ribbon_plan2D_10000pt.svg')
 
 print("Wrote:", stl_file)
 print("Wrote:", svg_file)
@@ -307,10 +307,10 @@ plt.show()
 
 
 ## =====Save points====
-file_path = "2DhelicalPoints_Ribbon_Lower.dat"
+'''file_path = "2DhelicalPoints_Ribbon_Lower.dat"
 with open(file_path, 'w') as f:
     for p in points_lower:
         #f.write(f"{p[0]} {p[1]}\n") # 2D points
-        f.write(f"{p[0]:.12e} {p[1]:.12e} {p[2]:.12e}\n")    #f.write(f"{p[0]} {p[1]} {p[2]}\n") # 3D points
+        f.write(f"{p[0]:.12e} {p[1]:.12e} {p[2]:.12e}\n")    #f.write(f"{p[0]} {p[1]} {p[2]}\n") # 3D points'''
         
 
